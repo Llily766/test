@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>
+		{% block title %}Garage de Vincent Parrot
+		{% endblock %}
+	</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> {% block stylesheets %}{% endblock %}
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+	<header>
+		<nav>
+
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+					<a href="/" class="nav-link active" aria-current="page">Accueil</a>
+				</li>
+				<li class="nav-item">
+					<a href="/occasion" class="nav-link">Occcasion</a>
+				</li>
+				<li class="nav-item">
+					<a href="/filtres" class="nav-link">Filtres</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		{% block body %}{% endblock %}
+	</main>
+	{% include "footer.html.twig" %}
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+	{% block javascripts %}
+		
+	{% endblock %}
+
+</body>
+</html>

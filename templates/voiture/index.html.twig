@@ -1,0 +1,41 @@
+{# templates/voiture/details.html.twig #}
+
+{% block body %}
+
+    {{ form_start(form) }}
+
+    {{ form_row(form.lastname, {
+        'label': 'Prénom',
+        'attr': {
+            'class': 'form-control',
+            'placeholder': 'Entrer votre prénom'
+        }
+    }) }}
+
+    {{ form_row(form.firstname, {
+        'label': 'Nom',
+        'attr': {
+            'class': 'form-control',
+            'placeholder': 'Entrer votre nom'
+        }
+    }) }}
+
+    {{ form_row(form.phone_number, {
+        'label': 'Téléphone',
+        'attr': {
+            'class': 'form-control',
+            'placeholder': 'Entrer votre numéro de téléphone'
+        }
+    }) }}
+
+    {{ form_row(form.email, {
+        'label': 'Email',
+        'attr': {
+            'class': 'form-control',
+            'placeholder': 'Entrer votre email'
+        }
+    }) }}
+
+    {{ form_end(form) }}
+
+{% endblock %}

@@ -1,0 +1,150 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello OccasionController!
+{% endblock %}
+
+{% block body %}
+
+	{{ dump(Cars) }}
+	<section class="container">
+		<h1 class="text-center">Les voitures d'occasion</h1>
+		<div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+			{% for car in Cars %}
+
+				<div class="col">
+					<div class="card" style="width: 18rem;">
+						<img src="upload/cars/{{ car.picture }}" alt="ford" class="align-self-center">
+						<div class="card-body">
+							<p class="card-text">{{ car.title }}</p>
+							<p>Caractéristiques:</p>
+							<p>Année de mise en circulation:{{ car.yearOfCirculation }}</p>
+							<p>Nombre de kilomètres :
+								{{ car.mileage }}</p>
+							<p>Prix:
+								{{ car.price }}
+								euros</p>
+
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+
+	<section class="container mt-5">
+		<div class="row">
+			<table class="tableau-style table table-dark table-hover">
+				<thead>
+					<tr>
+						<th colspan="2"></th>
+						<th scope="col">Ford</th>
+						<th scope="col">citroen</th>
+						<th scope="col">Audi</th>
+						<th scope="col">clio</th>
+						<th scope="col">espace</th>
+						<th scope="col">peugeot</th>
+						<th scope="col">clio1</th>
+						<th scope="col">ZOE</th>
+						<th scope="col">mercedes</th>
+						<th scope="col">citroenc3</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="2">airbag</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+					</tr>
+					<tr>
+						<td colspan="2">ABS</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+					</tr>
+					<tr>
+						<td colspan="2">Fermetures centralisées</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+					</tr>
+					<tr>
+						<td colspan="2">bluetooh</td>
+						<td>OUI</td>
+						<td>NON</td>
+						<td>OUI</td>
+						<td>NON</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>NON</td>
+					</tr>
+					<tr>
+						<td colspan="2">Rechargement électrique</td>
+						<td>NON</td>
+						<td>NON</td>
+						<td>OUI</td>
+						<td>NON</td>
+						<td>NON</td>
+						<td>NON</td>
+						<td>NON</td>
+						<td>OUI</td>
+						<td>OUI</td>
+						<td>NON</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section class="container mt-5">
+		<div class="row">
+			<div class="col-lg-6">
+				<div style="float: left;">
+					<div class="contact">
+					<h2>Contactez-nous</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	 <form action="#" method="post">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" name="prenom" required>
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="motDePasse">Mot de passe :</label>
+    <input type="password" id="motDePasse" name="motDePasse" required>
+
+	<label for="message">Messsage :</label>
+    <input type="message" id="messsage" name="messsage" required>
+</form>
+
+    {% endblock %}
